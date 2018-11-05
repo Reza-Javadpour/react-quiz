@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "category" :"sport",
+        "question": "Which one is correct team name in NBA ?",
+        "option1": "New York Bulls",
+        "option2": "Los Angeles Kings",
+        "option3": "Golden State Warriros",
+        "option4": "Huston Rocket",
+        "answer": "Huston Rocket"
+    },
+    {
+        "id": 2,
+        "category": "science",
+        "question": "What color is cobalt ?",
+        "option1": "Red",
+        "option2": "Blue",
+        "option3": "Black",
+        "option4": "Gray",
+        "answer": "Blue"
+    },
+    {
+        "id" : 3,
+        "category": "Film",
+        "question": "How many oscars did the Titanic movie got ?",
+        "option1": "Eleven",
+        "option2": "Three",
+        "option3": "Nine",
+        "option4": "One",
+        "answer": "Eleven"
+    },
+    {
+     "id": 4,
+    "category": "General",
+    "question": "What is both a French wine region and a luxury American automobile ?",
+    "option1": "Chevrolet",
+    "option2": "Toyota",
+    "option3": "Lexus",
+    "option4": "Cadillac",
+    "answer": "Cadillac"
+    },
+    {
+        "id": 5,
+        "category": "History",
+        "question": "Who was the first president of the USA ?",
+        "option1": "George Washington",
+        "option2": "James Madison",
+        "option3": "John Adams",
+        "option4": "James Monroe",
+        "answer": "George Washington"
+    },
+    {
+        "id": 6,
+        "category": "Nature",
+        "question": "Give another name for the study of fossils ?",
+        "option1": "Anthrozoology",
+        "option2": "arachnology",
+        "option3": "Paleontology",
+        "option4": "Archeozoology",
+        "answer": "Paleontology"
+    },
+    {
+        "id": 7,
+        "category": "Geography",
+        "question": "What is the noisiest city in the world ?",
+        "option1": "Shanghai",
+        "option2": "Cairo",
+        "option3": "Delhi",
+        "option4": "Hong Kong",
+        "answer": "Hong Kong"
+    },
+    {
+        "id": 8,
+        "category": "Politics",
+        "question": "In what year was the Berlin wall built ?",
+        "option1": "In the year 1959",
+        "option2": "In the year 1961",
+        "option3": "In the year 1916",
+        "option4": "In the year 1918",
+        "answer": "In the year 1961"
+    },
+    {
+        "id": 9,
+        "category": "Food",
+        "question": "Which country is the origin of the cocktail Mojito ?",
+        "option1": "USA",
+        "option2": "Greece",
+        "option3": "Cuba",
+        "option4": "brazil",
+        "answer": "Cuba"
+    },
+    {
+        "id": 10,
+        "category": "Art",
+        "question": "Who painted the ceiling of the Sistine Chapel ?",
+        "option1": "Michelangelo",
+        "option2": "Botticelli",
+        "option3": "Picasso",
+        "option4": "Leonardo Da Vinci",
+        "answer": "Michelangelo"
+    }
+]

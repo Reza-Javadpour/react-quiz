@@ -1,0 +1,76 @@
+body{
+    padding-bottom: 20vh;
+}
+.hidden{
+    display: none;
+}
+.navbar{
+    padding: 0.7rem 1rem;
+}
+.intro_section{
+    margin-top: 8vh;
+}
+.intro_section h2{
+    margin-bottom: 5vh;
+}
+.intro_submit_button{
+    width: 150px;
+    float: right;
+    margin-top: 4vh;
+}
+.quiz_next_button{
+    width: 100px;
+    float: right;
+    margin-top: 4vh;
+}
+.home_content{
+    margin-top: 8vh;
+    font-size: 1rem;
+}
+.quiz_content{
+    margin-top: 8vh;
+    font-size: 1rem;
+}
+.home_content h2{
+    margin-bottom: 5vh;
+}
+.card-body.quiz_card p{
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    color: black;
+    font-size: 1.3rem;
+}
+.custom-radio.quiz_item{
+    margin-bottom: 1.5vh;
+}
+.progress.quiz_progress{
+    margin-top: 0;
+}
+h3.quiz_category{
+    color: gray;
+}
+.badge.badge-info{
+    background-color: #593196;
+}
+span.score-badge{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    margin-right: 2vh;
+    font-size: 0.8rem;
+}
+.card-header.score_card{
+    background-color: #593196;
+    color: white;
+}
+.quiz_item label{
+    cursor: pointer;
+}
+.true_item{
+    color: #13b955 !important;
+    cursor: no-drop !important;
+    font-weight: bold !important;
+}
+.false_item{
+    color: #e2e2e2 !important;
+    cursor: no-drop !important;
+}
