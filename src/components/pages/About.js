@@ -12,7 +12,7 @@ class About extends Component {
 
                         <p>This is a prototype web-based online test. There may be some problems.</p>
                         <p>React, Redux & Bootstrap technologies are used in this project.</p>
-                        <p>You can clone & develop React Quiz in Github.</p>
+                        <p>You can clone & develop React Quiz in <a href="https://github.com/Reza-Javadpour/react-quiz">Github</a>.</p>
                         <Link className="btn btn-secondary quiz_next_button" to="/">Back</Link>
                     </div>
                 </div>
