@@ -23,7 +23,7 @@ class Registration extends Component {
         fullname : '',
         inputInvalid : '',
         email : ''
-    }
+    };
 
     changeFieldValue = (event) => {
         this.setState({fullname : event.target.value});
@@ -31,7 +31,7 @@ class Registration extends Component {
         this.setState({
             inputInvalid : ''
         })
-    }
+    };
 
     handleSubmit = (event) => {
         event.preventDefault();
@@ -46,11 +46,7 @@ class Registration extends Component {
                 inputInvalid : 'is-invalid'
             });
         }
-    }
-
-    // handleGetFullname = () =>{
-    //     this.props.dispatch(getUser(0))
-    // }
+    };
 
     render() {
         return (
@@ -111,8 +107,6 @@ class Registration extends Component {
 
                             </fieldset>
                         </form>
-
-                        {/*<span onClick={this.handleGetFullname}>Get Fullname</span>*/}
 
                     </div>
                 </div>

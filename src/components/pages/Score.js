@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
-import {getUser, setScore} from "../../actions";
+import {setScore} from "../../actions";
 import {connect} from "react-redux";
-import * as store from "react-redux";
 
 class Score extends Component {
 
@@ -20,22 +19,13 @@ class Score extends Component {
             score,
             trueA,
             falseA
-
         });
         this.props.dispatch(setScore(score));
     }
 
-
-
-    // getUsername(){
-        // this.props.dispatch(getUser(0));
-        // console.log(store.getState())
-    // }
-
     render() {
         return (
             <div>
-                {/*<h1 onClick={this.getUsername}>Get User</h1>*/}
                 <div className="container">
                     <div className="row quiz_content">
                         <div className="col-lg-6 m-auto">

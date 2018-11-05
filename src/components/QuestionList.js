@@ -9,16 +9,10 @@ class QuestionList extends Component {
         return (
             <div>
                 <div>
-                    {/*{console.log(qKey)}*/}
-                    {/*{questions.map(question =>*/}
-                        {/*<QuestionItem key={question.id} question={question} />*/}
-                    {/*)}*/}
+
                     <QuestionItem question={questions[qKey]} trueA={trueA} falseA={falseA} />
 
-
                 </div>
-
-
 
             </div>
         );

@@ -85,8 +85,6 @@ class Question extends Component {
                 'falseItem' : 'false_item',
                 'optionMode' : true
             });
-
-
         }
     }
 

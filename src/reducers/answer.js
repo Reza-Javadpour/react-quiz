@@ -5,8 +5,8 @@ export const answer = (state = [] , action) => {
                 ...state, {
                     userScore: action.userScore
                 }
-            ]
+            ];
         default:
             return state;
     }
-}
+};
