@@ -12,22 +12,20 @@ class Question extends Component {
         'falseAnswer' : 0,
         'timeoutActive' : true,
         'timeoutCounter' : 0,
-        'optionMode' : '',
+        'optionMode' : false,
         'trueItem' : '',
         'falseItem' : '',
-        'answered' : false
-
+        'answered' : false,
+        'hiddenPreQ' : false
     };
 
     componentDidMount(){
         if (this.state.timeoutActive) {
             this.timeout = setTimeout(() => {
                 this.timeout = setTimeout(() => {
-                    // this.handleNext(this.props.id);
                     if (!this.state.answered){
                         this.handleAnswer(0,1,this.props.id,this.props.trueA,this.props.falseA)
                     }
-                    // console.log(this.props.falseA);
                     this.setState({
                        'timeoutCounter' : 'timeoutCounter' + 1
                     });
@@ -56,29 +54,39 @@ class Question extends Component {
                 'timeoutActive' : false
             });
         }
-        document.getElementById("question_card_"+q).classList = document.getElementById("question_card_"+q).classList + " hidden";
+        this.setState({
+            'hiddenPreQ' : true
+        })
     }
 
     handleAnswer(userAnswer , correctAnswer , id , trueA = 0 , falseA = 0 , optionMode){
         if (!optionMode){
             const _trueA = parseInt(trueA);
             const _falseA = parseInt(falseA);
-            if(userAnswer === correctAnswer){
+            this.timeout = setTimeout(()=>{
+                if(userAnswer === correctAnswer){
+                    this.setState({
+                        'trueAnswer' : _trueA + 1,
+                        'falseAnswer' : _falseA
+                    });
+                }else{
+                    this.setState({
+                        'trueAnswer' : _trueA,
+                        'falseAnswer' : _falseA + 1
+                    });
+                }
                 this.setState({
-                    'trueAnswer' : _trueA + 1,
-                    'falseAnswer' : _falseA
+                    'answered' : true
                 });
-            }else{
-
-                this.setState({
-                    'trueAnswer' : _trueA,
-                    'falseAnswer' : _falseA + 1
-                });
-            }
+                this.handleNext(id);
+            },2000);
             this.setState({
-               'answered' : true
+                'trueItem' : 'true_item',
+                'falseItem' : 'false_item',
+                'optionMode' : true
             });
-            this.handleNext(id);
+
+
         }
     }
 
@@ -91,7 +99,7 @@ class Question extends Component {
         };
         return (
             <div>
-                <div id={"question_card_"+id} className="container">
+                <div id={"question_card_"+id} className={"container " + (this.state.hiddenPreQ ? "hidden" : "")}>
                     <div className="row quiz_content">
                         <div className="col-lg-6 m-auto">
                             <div className="card border-light mb-3">
@@ -129,7 +137,7 @@ class Question extends Component {
                                     <div>
                                         <button
                                             className="btn btn-secondary quiz_next_button"
-                                            onClick={() => this.handleAnswer(0,1,id,trueA,falseA) }>
+                                            onClick={() => this.handleAnswer(0,1,id,trueA,falseA,false) }>
                                             Next
                                         </button>
                                     </div>
