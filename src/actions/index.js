@@ -2,14 +2,10 @@
 
 import * as types from "../constants/actionTypes";
 
-export const registerUser = fullname => ({
+export const registerUser = (fullname,email) => ({
     type : 'SUBMIT_USER',
-    fullname
-});
-
-export const getUser = id => ({
-    type : 'GET_FULLNAME',
-    id
+    fullname,
+    email
 });
 
 export const receiveQuestions = questions => ({

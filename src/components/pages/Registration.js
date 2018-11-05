@@ -26,8 +26,10 @@ class Registration extends Component {
     };
 
     changeFieldValue = (event) => {
-        this.setState({fullname : event.target.value});
-
+        console.log(event.target.name);
+        let targetName = event.target.name;
+        let targetValue = event.target.value;
+        this.setState({[targetName] : targetValue});
         this.setState({
             inputInvalid : ''
         })
@@ -40,7 +42,7 @@ class Registration extends Component {
         });
         if (this.state.fullname !== ""){
             this.props.history.push('/quiz');
-            this.props.dispatch(registerUser(this.state.fullname));
+            this.props.dispatch(registerUser(this.state.fullname , this.state.email));
         }else{
             this.setState({
                 inputInvalid : 'is-invalid'
@@ -71,19 +73,19 @@ class Registration extends Component {
                                     <div className="invalid-feedback">You must input your Name.</div>
                                 </div>
 
-                                {/*<div className="form-group">*/}
-                                    {/*<label htmlFor="email">Email address</label>*/}
-                                    {/*<input type="email"*/}
-                                           {/*className="form-control"*/}
-                                           {/*id="email"*/}
-                                           {/*name="email"*/}
-                                           {/*value={this.state.email}*/}
-                                           {/*onChange={this.changeFieldValue.bind(this)}*/}
-                                           {/*placeholder="Enter your email"/>*/}
-                                        {/*<small id="emailHelp" className="form-text text-muted">*/}
-                                            {/*We'll never share your email with anyone else.*/}
-                                        {/*</small>*/}
-                                {/*</div>*/}
+                                <div className="form-group">
+                                    <label htmlFor="email">Email address</label>
+                                    <input type="email"
+                                           className="form-control"
+                                           id="email"
+                                           name="email"
+                                           value={this.state.email}
+                                           onChange={this.changeFieldValue}
+                                           placeholder="Enter your email"/>
+                                        <small id="emailHelp" className="form-text text-muted">
+                                            We'll never share your email with anyone else.
+                                        </small>
+                                </div>
 
                                 {/*<fieldset className="form-group">*/}
                                     {/*<label>Gender</label>*/}

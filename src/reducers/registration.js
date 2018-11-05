@@ -3,7 +3,8 @@ export const registration = (state = [] , action) => {
         case 'SUBMIT_USER':
             return [
                 ...state, {
-                    fullname: action.fullname
+                    fullname: action.fullname,
+                    email: action.email
                 }
             ];
         default:
